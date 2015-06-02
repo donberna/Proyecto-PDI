@@ -1,0 +1,13 @@
+Punto 2.2 
+Podemos observar que al tratar las imagenes con operadores puntuales se pueden mejorar ciertas caracteristicas de la 
+misma obteniendo asi una mayor calidad, pero cabe resaltar los operadores ofrecen resultados distintos sobre la imagen y depende de 
+lo que queramos mejorar para aplicar cierto operador.
+
+
+Punto 2.4 
+El histograma nos ayuda a describir la imagen, por ende es de gran benefio a la hora de seleccionar un operador puntual, 
+pero a su ves nos sirve para aplicar otras tecnicas como la ecualizacion donde en la practica podemos evidenciar de que nos 
+ayuda a mejorar el contraste de una imagen, al distribuir los niveles de grises de la imagen, pero cabe resaltar que no 
+siempre esta tecnica nos arroja los mejores resultados ya que se pueden perder ciertos detalles sobre las imagenes.
+
+

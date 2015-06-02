@@ -1,0 +1,105 @@
+# depslib dependency file v1.0
+1379008837 source:d:\ejemplos\imagen\imagen.cpp
+	"Imagen.h"
+
+1424966319 
+
+1379008822 d:\ejemplos\imagen\imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1379008865 source:d:\ejemplos\imagen\main.cpp
+	<iostream>
+	"Imagen.h"
+
+1379544113 source:c:\users\univalletulua\desktop\imagen\imagen.cpp
+	"Imagen.h"
+
+1379544113 c:\users\univalletulua\desktop\imagen\imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1379544060 source:c:\users\univalletulua\desktop\imagen\main.cpp
+	<iostream>
+	"Imagen.h"
+
+1379544062 source:/home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/main.cpp
+	<iostream>
+	"Imagen.h"
+
+1394460812 /home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/Imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1394468606 source:/home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/Imagen.cpp
+	"Imagen.h"
+
+1394468606 source:c:\users\miguel\desktop\imagenv2\imagen\imagen.cpp
+	"Imagen.h"
+
+1394460812 c:\users\miguel\desktop\imagenv2\imagen\imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1424813801 source:c:\users\miguel\desktop\imagenv2\imagen\main.cpp
+	<iostream>
+	"Imagen.h"
+
+1424968671 source:c:\users\estudiante univalle\desktop\imagenv2\imagen\imagen.cpp
+	"Imagen.h"
+
+1424966319 c:\users\estudiante univalle\desktop\imagenv2\imagen\imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1424968053 source:c:\users\estudiante univalle\desktop\imagenv2\imagen\main.cpp
+	<iostream>
+	"Imagen.h"
+
+1426741120 source:/home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/Imagen.cpp
+	"Imagen.h"
+
+1426735979 /home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/Imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<math.h>
+	<stdlib.h>
+
+1426741362 source:/home/donb/Escritorio/Semestre_9 /PDI/ImagenV2/Imagen/main.cpp
+	<iostream>
+	"Imagen.h"
+
+1432843826 source:/home/donb/Escritorio/Semestre_9 /PDI/laboratorio 1/ImagenV2/Imagen/Imagen.cpp
+	"Imagen.h"
+
+1426735980 /home/donb/Escritorio/Semestre_9 /PDI/laboratorio 1/ImagenV2/Imagen/Imagen.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<math.h>
+	<stdlib.h>
+
+1432849436 source:/home/donb/Escritorio/Semestre_9 /PDI/laboratorio 1/ImagenV2/Imagen/main.cpp
+	<iostream>
+	"Imagen.h"
+
