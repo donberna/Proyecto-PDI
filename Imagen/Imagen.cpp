@@ -1,5 +1,5 @@
 /*
-    Luis Ovidio GOnzalez Codigo: 201154010
+    Luis Ovidio Gonzalez Codigo: 201154010
     Miguel Angel Bernal Codigo: 201153852
     Aslhey Ramirez Codigo:1153765
 */
@@ -73,7 +73,7 @@ void Imagen::escribe(string nombrefichero)const{
 }
 
 
-/* operadores punto 2.2 */
+
 void Imagen::invertir_imagen(){
 
     for(int i = 0; i < _pixels.size(); i++){
