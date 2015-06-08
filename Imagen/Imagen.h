@@ -42,6 +42,7 @@ class Imagen
         void resta(Imagen,std::string);
         void colocar_ceros();
         void filtradoEspacial(int tamano, std::vector<int> mascara, double coeficiente);
+        void mejorarImagen();
 
     protected:
     private:

@@ -14,6 +14,22 @@ int main()
     Imagen I(50,50);
     I.lee("RG1.pgm");
 
+    vector<int> h;
+    h.push_back(0); h.push_back(1); h.push_back(0);
+    h.push_back(1); h.push_back(1); h.push_back(1);
+    h.push_back(0); h.push_back(1); h.push_back(0);
+    int tamano = 3;
+
+    I.lee("imagenes/In/RG1.pgm");
+    I.filtradoEspacial(tamano,h,0.5);
+     I.escribe("imagenes/Out/RG/SalidaRG1.pgm");
+
+    I.lee("imagenes/Out/RG/SalidaRG1.pgm");
+    I.operadorUmbral(150);
+    I.escribe("imagenes/Out/RG/SalidaUmbralRG1.pgm");
+
+    //I.mejorarImagen();
+
     //resta
     /*I.lee("SalidaInvertir.pgm");
     Imagen I2(50,50);
@@ -30,10 +46,7 @@ int main()
     I.operadorUmbral(100);
     I.escribe("umbralRL4.pgm");*/
 
-     //operador intervadolo de umbral
-    /*I.lee("camionetas.pgm");
-    I.intervaloUmbral(80, 190);
-    I.escribe("salidaIntervaloUmbral.pgm");*/
+
 
 
 
