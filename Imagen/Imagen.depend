@@ -103,18 +103,12 @@
 	<iostream>
 	"Imagen.h"
 
-<<<<<<< HEAD
-1433205985 source:/home/donb/Escritorio/Proyecto-PDI/Imagen/Imagen.cpp
+1433715353 D
+
+1433803632 source:/home/donb/Escritorio/Proyecto-PDI/Imagen/Imagen.cpp
 	"Imagen.h"
 
-1433205984 /home/donb/Escritorio/Proyecto-PDI/Imagen/Imagen.h
-=======
-1433728391 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.cpp
-	"Imagen.h"
-	<typeinfo>
-
-1433715353 /home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.h
->>>>>>> 0a6a4d0568b5d997a2c03f6c424049988b1993bf
+1433797521 /home/donb/Escritorio/Proyecto-PDI/Imagen/Imagen.h
 	<vector>
 	<string>
 	<fstream>
@@ -123,11 +117,26 @@
 	<math.h>
 	<stdlib.h>
 
-<<<<<<< HEAD
-1433778535 source:/home/donb/Escritorio/Proyecto-PDI/Imagen/main.cpp
-=======
-1433717511 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/main.cpp
->>>>>>> 0a6a4d0568b5d997a2c03f6c424049988b1993bf
+1433728391 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.cpp
+	"Imagen.h"
+	<typeinfo>
+
+1433715353 /home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.h
+
+1433717511 a4d0568b5d997a2c03f6c424049988b1993bf
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<math.h>
+	<stdlib.h>
 	<iostream>
 	"Imagen.h"
+
+1433796187 source:/home/donb/Escritorio/Proyecto-PDI/Imagen/main.cpp
+	<iostream>
+	"Imagen.h"
+
+1433717511 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/main.cpp
 
