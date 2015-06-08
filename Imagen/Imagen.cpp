@@ -213,9 +213,9 @@ void Imagen::mejorarImagen()
 
     int tamano = 3;
 
-    // para aplicar el filtro paso alto
 
-    //cout<<"nombre: "<<nombreImagen<<endl;
+
+
 
     /* los siguientes condicionales describen, cada uno, el flujo para hacer
     el mejoramiento de cada una de las imagenes, existen una imagenes para
@@ -228,9 +228,9 @@ void Imagen::mejorarImagen()
             filtradoEspacial(tamano,mascara1,0.5);
             escribe("imagenes/Out/RG/SalidaRG1.pgm");
 
-            //lee("imagenes/Out/RG/SalidaRG1.pgm");
-            //operadorUmbral(150);
-            //escribe("imagenes/Out/RG/SalidaUmbralRG1.pgm");
+            lee("imagenes/Out/RG/SalidaRG1.pgm");
+            operadorUmbral(150);
+            escribe("imagenes/Out/RG/SalidaUmbralRG1.pgm");
 
             cout<<"Operaciones realizadas con éxito"<<endl;
 
@@ -248,9 +248,19 @@ void Imagen::mejorarImagen()
 
         if(nombreImagen == "imagenes/In/RG4.pgm")
         {
-            //1-humbralinvertido(25,255);-->este metodo no esta incluido
-            //2-invertir imagen de la salida paso 1
+            //1-humbral invertido (25,255)
+            lee(nombreImagen);
+            humbralinvertido(25,255);//-->este metodo no esta incluido
+            escribe("imagenes/Out/RG/SalidaRG4.pgm");
+
+            //2-invertir imagen salida paso 1
+            lee("imagenes/Out/RG/SalidaRG4.pgm");
+            invertir_imagen();
+            escribe("imagenes/Out/RG/SalidaInvertirRG4.pgm");
+
+
             //3-restar salida paso 2 con la imagen original
+
             //invertir salida paso 3
             //filtrado espacial salida paso 4
         }
@@ -281,8 +291,11 @@ void Imagen::mejorarImagen()
         {
             lee(nombreImagen);
             filtradoEspacial(tamano,mascara2,3.5);
-            operadorUmbral(100);
             escribe("imagenes/Out/RLA/SalidaRLA4.pgm");
+
+            lee("imagenes/Out/RLA/SalidaRLA4.pgm")
+            operadorUmbral(100);
+            escribe("imagenes/Out/RLA/SalidaUmbralRLA4.pgm");
 
         }
 //        else
