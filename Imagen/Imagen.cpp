@@ -193,6 +193,7 @@ void Imagen::filtradoEspacial(int tamano, std::vector<int> mascara, double coefi
 
 void Imagen::mejorarImagen()
 {
+
     std::string nombreImagenEntrada;
     cout << "Digite el nombre de la imagen a cargar" <<endl;
     cin >> nombreImagenEntrada;
@@ -215,6 +216,10 @@ void Imagen::mejorarImagen()
     // para aplicar el filtro paso alto
 
     //cout<<"nombre: "<<nombreImagen<<endl;
+
+    /* los siguientes condicionales describen, cada uno, el flujo para hacer
+    el mejoramiento de cada una de las imagenes, existen una imagenes para
+    las que solo es necesario aplicar los metodos para detectar bordes*/
 
         if(nombreImagen == "imagenes/In/RG1.pgm")
         {
