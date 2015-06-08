@@ -103,10 +103,11 @@
 	<iostream>
 	"Imagen.h"
 
-1433712181 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.cpp
+1433728391 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.cpp
 	"Imagen.h"
+	<typeinfo>
 
-1433712181 /home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.h
+1433715353 /home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/Imagen.h
 	<vector>
 	<string>
 	<fstream>
@@ -115,7 +116,7 @@
 	<math.h>
 	<stdlib.h>
 
-1433712181 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/main.cpp
+1433717511 source:/home/luis/Documentos/Universidad/SemestreIX/PDI/Proyecto-PDI/Imagen/main.cpp
 	<iostream>
 	"Imagen.h"
 

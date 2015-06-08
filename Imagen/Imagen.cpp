@@ -6,6 +6,8 @@
 
 #include "Imagen.h"
 
+#include <typeinfo>
+
 using namespace std;
 
 Imagen::Imagen() //aqui se llama al constructor de _pixel (por defecto)
@@ -37,6 +39,7 @@ void Imagen::lee(string nombrefichero){
     ifstream F(nombrefichero.c_str());
     if (!F.is_open()){
         cout <<"No se ha podido abrir '" << nombrefichero << "'" << endl;
+        cout <<"Revice el nombre del fichero, y digitelo nuevamente"<< endl;
         return;
     }
     string linea;
@@ -184,4 +187,94 @@ void Imagen::filtradoEspacial(int tamano, std::vector<int> mascara, double coefi
                     i+=cerosPorFila;
                 }
         }
+
+
+}
+
+void Imagen::mejorarImagen()
+{
+    std::string nombreImagenEntrada;
+    cout << "Digite el nombre de la imagen a cargar" <<endl;
+    cin >> nombreImagenEntrada;
+
+    std::string nombreImagen = "imagenes/In/" + nombreImagenEntrada;
+
+    vector<int> mascara1;
+    mascara1.push_back(0);  mascara1.push_back(1);  mascara1.push_back(0);
+    mascara1.push_back(1);  mascara1.push_back(1);  mascara1.push_back(1);
+    mascara1.push_back(0);  mascara1.push_back(1);  mascara1.push_back(0);
+
+    vector<int> mascara2;
+    mascara2.push_back(1); mascara2.push_back(1); mascara2.push_back(1);
+    mascara2.push_back(1); mascara2.push_back(9); mascara2.push_back(1);
+    mascara2.push_back(1); mascara2.push_back(1); mascara2.push_back(1);
+
+
+    int tamano = 3;
+
+    // para aplicar el filtro paso alto
+
+    //cout<<"nombre: "<<nombreImagen<<endl;
+
+        if(nombreImagen == "imagenes/In/RG1.pgm")
+        {
+
+            lee(nombreImagen);
+            filtradoEspacial(tamano,mascara1,0.5);
+            escribe("imagenes/Out/RG/SalidaRG1.pgm");
+
+            //lee("imagenes/Out/RG/SalidaRG1.pgm");
+            //operadorUmbral(150);
+            //escribe("imagenes/Out/RG/SalidaUmbralRG1.pgm");
+
+            cout<<"Operaciones realizadas con éxito"<<endl;
+
+        }
+
+        if(nombreImagen == "imagenes/In/RG2.pgm")
+        {
+        }
+
+        if(nombreImagen == "imagenes/In/RG3.pgm")
+        {
+        }
+
+        if(nombreImagen == "imagenes/In/RG4.pgm")
+        {
+        }
+
+        if(nombreImagen == "imagenes/In/RLA1.pgm")
+        {
+            lee(nombreImagen);
+            filtradoEspacial(tamano,mascara1,0.5);
+            operadorUmbral(210);
+            escribe("imagenes/Out/RLA/SalidaRLA1.pgm");
+
+        }
+
+        if(nombreImagen == "imagenes/In/RLA2.pgm")
+        {
+        }
+
+         if(nombreImagen == "imagenes/In/RLA3.pgm")
+        {
+        }
+
+         if(nombreImagen == "imagenes/In/RLA4.pgm")
+        {
+            lee(nombreImagen);
+            filtradoEspacial(tamano,mascara2,3.5);
+            operadorUmbral(100);
+            escribe("imagenes/Out/RLA/SalidaRLA4.pgm");
+
+        }
+//        else
+//            {
+//                cout<<"el nombre incorecto"<<endl;
+//            }
+
+
+
+
+
 }
