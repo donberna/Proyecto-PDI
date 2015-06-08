@@ -233,31 +233,43 @@ void Imagen::mejorarImagen()
 
         if(nombreImagen == "imagenes/In/RG2.pgm")
         {
+            //algun operador para detectar bordes
         }
 
         if(nombreImagen == "imagenes/In/RG3.pgm")
         {
+            //algun operador para detectar bordes
         }
 
         if(nombreImagen == "imagenes/In/RG4.pgm")
         {
+            //1-humbralinvertido(25,255);-->este metodo no esta incluido
+            //2-invertir imagen de la salida paso 1
+            //3-restar salida paso 2 con la imagen original
+            //invertir salida paso 3
+            //filtrado espacial salida paso 4
         }
 
         if(nombreImagen == "imagenes/In/RLA1.pgm")
         {
             lee(nombreImagen);
             filtradoEspacial(tamano,mascara1,0.5);
-            operadorUmbral(210);
             escribe("imagenes/Out/RLA/SalidaRLA1.pgm");
+
+            lee("imagenes/Out/RLA/SalidaRLA1.pgm")
+            operadorUmbral(210);
+            escribe("imagenes/Out/RLA/SalidaUmbralRLA1.pgm");
 
         }
 
         if(nombreImagen == "imagenes/In/RLA2.pgm")
         {
+            //iden RG3
         }
 
          if(nombreImagen == "imagenes/In/RLA3.pgm")
         {
+            //idem RG3
         }
 
          if(nombreImagen == "imagenes/In/RLA4.pgm")
