@@ -92,6 +92,14 @@ void Imagen::operadorUmbral(int p1){
     }
 }
 
+void Imagen::intervaloUmbralInvertido(int p1, int p2){
+    for(int i = 0; i < _pixels.size(); i++){
+            if( (_pixels[i] <= p1) || (_pixels[i] >= p2) )_pixels[i] = 0;
+            if( (p1 < _pixels[i]) && (p2 > _pixels[i])  ) _pixels[i] = max;
+
+    }
+}
+
 void Imagen::resta(Imagen i1, string nombrearchivo){
     Imagen temp(_ancho, _alto);
  	int s = _pixels.size();

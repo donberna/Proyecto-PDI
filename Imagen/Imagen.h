@@ -36,6 +36,7 @@ class Imagen
         /* operadores para tratar el ruido de las imagenes */
         void invertir_imagen();
         void operadorUmbral(int p1);
+        void intervaloUmbralInvertido(int p1, int p2);
         int getpixel(int i) const {return _pixels[i];}
         void setpixel(int i, int valor){_pixels[i] = valor;}
         void resta(Imagen,std::string);
