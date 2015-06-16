@@ -39,18 +39,18 @@ Imagen::Imagen(int ancho, int alto)
 }
 
 // funcion que nos permite leer una imagen en formato pgm
-void Imagen::lee(string nombrefichero){
+int Imagen::lee(string nombrefichero){
 
     ifstream F(nombrefichero.c_str());
     if (!F.is_open()){
         cout <<"No se ha podido abrir '" << nombrefichero << "'" << endl;
-        return;
+        return -1;
     }
     string linea;
     getline(F, linea);
     if (linea != "P2"){
         cout <<"formato incorrecto" << endl;
-        return;
+        return -1;
     }
     getline(F, linea); //suponemos que son comentarios
     while (linea[0] == '#'){
@@ -59,10 +59,12 @@ void Imagen::lee(string nombrefichero){
     istringstream S(linea);
     S >> _ancho >> _alto;
     F >> max; //suponer max es 255
+    max = 255;
     _pixels.resize((_ancho*_alto));
     for(int i = 0; i < _pixels.size(); i++){
         F >> _pixels[i];
     }
+    return 1;
 }
 
 // funcion para escribir un nuevo archivo (imagen resultante)
@@ -78,6 +80,7 @@ void Imagen::escribe(string nombrefichero)const{
             F<<endl;
         }
     }
+    F.close();
 }
 
 // funcion que aplica el metodo de umbral
@@ -115,6 +118,23 @@ void Imagen::resta(Imagen i1, string nombrearchivo){
       }
 
     temp.escribe(nombrearchivo);
+
+}
+
+// funcion que realiza la resta entre dos imagenes
+Imagen Imagen::resta(Imagen i1){
+    // se crea una imagen temporal para guardar los valores
+    Imagen temp(_ancho, _alto);
+ 	int s = _pixels.size();
+
+ 	// se recorren las dos imagenes aplicando la resta
+	for(int i=0; i < s;i++)
+      {
+        if((_pixels[i] - i1.getpixel(i))*2 < 0) temp.setpixel(i, 0);
+        else temp.setpixel(i,(_pixels[i] - i1.getpixel(i))*2 );
+      }
+
+    return temp;
 
 }
 
@@ -436,3 +456,75 @@ void Imagen::mejorarImagen()
                 cout<<"No se han podido ralizar las acciones, archivo no encontrado"<<endl;
             }
 }
+
+void Imagen::calculaHistograma(){
+
+    /* calculo las frecuencias */
+    for(int i = 0; i <= max; i++){
+        for(int j = 0; j < _pixels.size(); j++){
+            if (i == _pixels[j]){
+                tabla[0][i]++;
+            }
+
+        }
+    }
+}
+
+/* funcion para calcular la frecuacia acumulada */
+void Imagen::calcula_FA(){
+
+    tabla[1][0] = tabla[0][0];
+
+    for(int i = 1; i <= max; i++){
+		tabla[1][i] = tabla[0][i] + tabla[1][i-1];
+    }
+}
+
+
+/* 2.4.3 funcion encargada de ejecutar los pasos para ecualizar el histograma */
+void Imagen::ecualizarHistograma(){
+
+    std::vector<double> t;
+    for (int i = 0; i < 5 ; i++){
+        for (int j = 0; j <= max; j++){
+            t.push_back(0.0);
+        }
+        tabla.push_back(t);
+    }
+
+    //paso 1: se calcula el histograma
+    calculaHistograma();
+
+    //paso 2: se calcula la frecuancia acumulada
+    calcula_FA();
+
+    //paso 3 y 4:
+    double cantidadPixels = _pixels.size();
+
+    for(int i = 0; i <= max; i++){
+
+        //Por cada Da realizar Dm/Ao
+        tabla[2][i] = (max/cantidadPixels) * tabla[1][i];
+
+        // discretizar f(Da)
+        tabla[3][i] = round(tabla[2][i]);
+    }
+
+    /*Paso 5: se crea el nuevo histograma y se reemplaza cada nivel de gris Da en la imagen
+     entrada por el correspondiente valor de f(Da)*/
+    for(int i = 0; i <= max; i++){
+        for(int j = 0; j <= max; j++){
+            if (i == tabla[3][j]){
+                //cout<<"entro"<<endl;
+                tabla[4][i] += tabla[0][j];
+            }
+        }
+    }
+
+    for(int i=0; i < _pixels.size(); i++){
+       _pixels[i] = tabla[3][_pixels[i]];
+    }
+
+
+}
+
