@@ -34,20 +34,12 @@ class Medida
             {
                 if (img->getpixel(j,columna) != color_pivote)
                 {
-                    //cout<<"cambio"<<endl;
                     cambios[contador_cambios] = j;
                     contador_cambios++;
                     color_pivote = img->getpixel(j,columna);
                 }
             }
 
-            /*
-            for(int j = 0;j < 4; j++)
-            {
-
-                cout<<cambios[j]<<endl;
-
-            }*/
             if(cambios[3] == 0)
             {
                 cout<<"No se pueden calcular las dimensiones"<<endl;
@@ -63,6 +55,7 @@ class Medida
         virtual ~Medida() {}
     protected:
     private:
+
     static int encontrar_columna(Imagen *img)
     {
         for(int i = 0;i < img->ancho(); i++)
@@ -71,12 +64,11 @@ class Medida
                 {
                     if(img->getpixel(i,j) == 0)
                     {
-                        //cout<<i<<" "<<j<<"\n";
-                        //cout<<img->getpixel(i,j)<<endl;
                         return j;
                     }
                 }
             }
+            return -1;
     }
 };
 

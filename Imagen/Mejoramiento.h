@@ -19,20 +19,20 @@ class Mejoramiento
         }
 
 
-        static Imagen rg(Imagen input, int umbral)
+        static Imagen normal(Imagen input, int umbral=150)
         {
             vector<int> mascara1 = obtenerMascara1();
 
             input.filtradoEspacial(3,mascara1,0.5);
+
             input.ecualizarHistograma();
             input.operadorUmbral(umbral);//150 //210
 
             return input;
         }
 
-        static Imagen rg4(Imagen input)
+        static Imagen ruido(Imagen input, int umbral=160)
         {
-            cout<<"RG4"<<endl;
             Imagen original = input;
             vector<int> mascara1 = obtenerMascara1();
 
@@ -51,7 +51,7 @@ class Mejoramiento
 
             //5-filtrado espacial salida paso 4
             input.filtradoEspacial(3,mascara1,0.5);
-            input.operadorUmbral(150);
+            input.operadorUmbral(umbral);
 
 
             return input;

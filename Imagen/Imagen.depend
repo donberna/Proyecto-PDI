@@ -152,16 +152,16 @@
 	<math.h>
 	<stdlib.h>
 
-1434217775 source:/home/rizotas/Proyectos/Proyecto-PDI/Imagen/main.cpp
+1435069645 source:/home/rizotas/Proyectos/Proyecto-PDI/Imagen/main.cpp
 	<iostream>
 	<getopt.h>
 	"Imagen.h"
 	"Mejoramiento.h"
 	"Medida.h"
 
-1434471193 /home/rizotas/Proyectos/Proyecto-PDI/Imagen/Mejoramiento.h
+1435184906 /home/rizotas/Proyectos/Proyecto-PDI/Imagen/Mejoramiento.h
 	"Imagen.h"
 
-1434474382 /home/rizotas/Proyectos/Proyecto-PDI/Imagen/Medida.h
+1435194416 /home/rizotas/Proyectos/Proyecto-PDI/Imagen/Medida.h
 	"Imagen.h"
 
